@@ -6,7 +6,7 @@ Design and implement(with tests) a _message delivery system_ using [Go](http://g
 
 ![Example](https://dl.dropboxusercontent.com/u/13424146/delivery_example.png)
 
-In this simplified scenario system includes the following parts:
+In this simplified scenario the message delivery system includes the following parts:
 
 ### Hub
 

@@ -1,33 +1,26 @@
-# developer-assignment-backend
+# Assignment
 
-Return your answer as a zip file containing all relevant files. 
+Return your answer as a zip file containing all relevant files(including `.git`, so that we can see your commit history), do not fork this repo. 
 
-## Software design
+Design and implement(with tests) a _message delivery system_ using [Go](http://golang.org/) programming language. You are free to use any external libs if needed.
 
-Use at most 2 hours total when answering these questions, so no need to go into minor details.
+![Example](https://dl.dropboxusercontent.com/u/13424146/delivery_example.png)
 
-We want to store game specific data for users. Design a backend service that stores this data and supports the following requirements & use cases:
+In this simplified scenario system includes the following parts:
 
-- We have 10 000 mobile games which have on average 10 000 daily active users, the service must be designed to support this load
-- Store users data in a game
-  - This data can be different for each game and may contain any number of properties e.g. level, score, etc.
-  - Data may be updated multiple times per game session
-- Game developer can query user data with following constraints:
-  - Property is equal to given value
-  - Property's value is less/greater than given value
-  - Multiple constraints may be included in the query
-  - For example: "give me user ids in my game who are in level 2 who have score greater than 9000"
+### Hub
 
+Hub relays incoming messages to receivers based on user ID(s) defined in the message.
 
-### 1. Service architecture
-Describe the overall architecture of the service, what components are needed and what is their responsibility. What things to consider when designing a service with this kind of scale? Focus on the software components, no need to think about hardware etc.
+### Clients
+Clients are users who are connected to the hub. Client may send messages to hub which relays message to receiving users (other clients), which are connected to hub.
 
-### 2. Data storage
-Design the data storage for this service. Describe what database(s) to use and model the data. Use diagrams, provide the database schemas or use other relevant methods to describe the data model. Explain the pros/cons of your solution.
+### Message
 
-### 3. Design the API for the service
-Describe the backend's API(s) to support the given use cases.
+Design the optimal data format for the message delivery system, so that it consumes minimal amount resources (memory, cpu, etc.).
 
-## Programming task
+The following constraints apply:
 
-Implement a message hub.
+- message should be relayed to one or multiple receivers (max 255 receivers per message is supported)
+- message payload - byte array (containing the message content, in most cases JSON), max length 1024 kilobytes
+- user_id - unsigned 64 bit integer

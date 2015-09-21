@@ -13,7 +13,7 @@ In this simplified scenario the message delivery system includes the following p
 Hub relays incoming messages to receivers based on user ID(s) defined in the message. You don't need to implement authentication, hub can for example assign arbitrary (unique) user id  to the client once its connected.
 
 ### Clients
-Clients are users who are connected to the hub. Client may send messages to hub which relays message to receiving users (other clients), which are connected to hub. Connection to hub must be done using pure TCP.
+Clients are users who are connected to the hub. Client may send messages to hub which relays message to receiving users (other clients), which are connected to hub.
 
 ### Message
 
@@ -21,6 +21,7 @@ Design the optimal data format for the message delivery system, so that it consu
 
 The following constraints apply:
 
-- message should be relayed to one or multiple receivers (max 255 receivers per message is supported)
-- message payload - byte array (containing the message content, in most cases JSON), max length 1024 kilobytes
+- Message should be relayed to one or multiple receivers (max 255 receivers per message is supported)
+- Message payload - byte array (containing the message content, in most cases JSON), max length 1024 kilobytes
 - user_id - unsigned 64 bit integer
+- Connection to hub must be done using pure TCP. Payload length is finite and protocol doesnt require multiplexing.

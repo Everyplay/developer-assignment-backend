@@ -10,10 +10,10 @@ In this simplified scenario the message delivery system includes the following p
 
 ### Hub
 
-Hub relays incoming messages to receivers based on user ID(s) defined in the message.
+Hub relays incoming messages to receivers based on user ID(s) defined in the message. You don't need to implement authentication, hub can for example assign arbitrary (unique) user id  to the client once its connected.
 
 ### Clients
-Clients are users who are connected to the hub. Client may send messages to hub which relays message to receiving users (other clients), which are connected to hub. You don't need to implement authentication, hub can assign arbitrary user id (unique) to the client once its connected.
+Clients are users who are connected to the hub. Client may send messages to hub which relays message to receiving users (other clients), which are connected to hub.
 
 ### Message
 

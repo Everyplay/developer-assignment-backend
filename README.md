@@ -24,4 +24,4 @@ The following constraints apply:
 - Message can be relayed to one or multiple receivers (max 255 receivers per message is supported)
 - Message payload - byte array (containing the message content, in most cases JSON), max length 1024 kilobytes
 - user_id - unsigned 64 bit integer
-- Connection to hub must be done using pure TCP. Payload length is finite and protocol doesnt require multiplexing.
+- Connection to hub must be done using pure TCP. Protocol doesnt require multiplexing.

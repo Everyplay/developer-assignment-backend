@@ -75,6 +75,10 @@ func RunHubTests(hub msghub.MessageHub, messageEncoder msghub.MessageEncoder) {
 
 	time.Sleep(time.Second * 2)
 
+	if len(hub.ClientIDs()) != 50 {
+		panic("Hub should have 50 clients connected")
+	}
+
 	payload := []byte("FOOBAR")
 	result := testing.Benchmark(func(b *testing.B) {
 		for i := 0; i < b.N; i++ {

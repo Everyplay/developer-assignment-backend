@@ -22,6 +22,6 @@ Design the optimal data format for the message delivery system, so that it consu
 The following constraints apply:
 
 - Message can be relayed to one or multiple receivers (max 255 receivers per message is supported)
-- Message payload - byte array (containing the message content, in most cases JSON), max length 1024 kilobytes
+- Message payload - byte array (containing the message content, it could be text, JSON, binary, or anything), max length 1024 kilobytes
 - user_id - unsigned 64 bit integer
 - Connection to hub must be done using pure TCP. Protocol doesnt require multiplexing.

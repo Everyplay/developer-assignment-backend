@@ -34,4 +34,4 @@ Client can send a relay messages which payload is relayed to receivers marked in
 
 ![Relay](https://raw.githubusercontent.com/Everyplay/developer-assignment-backend/master/relay.seq.png)
 
-receivers: 2 and 3, content/payload: foobar
+*Relay example: receivers: 2 and 3, content/payload: foobar*

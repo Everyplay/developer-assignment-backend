@@ -29,7 +29,7 @@ Client can send a list message which the hub will answer with the list of all co
 ### Relay message
 Client can send a relay messages which payload is relayed to receivers marked in the message. Design the optimal data format for the message delivery system, so that it consumes minimal amount resources (memory, cpu, etc.). Message content can be relayed to one or multiple receivers.
 
-- max 255 receivers (user_id:s) per message - unsigned 64 bit integer
+- max 255 receivers (user_id:s) per message
 - message content/payload - byte array (text, JSON, binary, or anything), max length 1024 kilobytes
 
 ![Relay](https://raw.githubusercontent.com/Everyplay/developer-assignment-backend/master/relay.seq.png)

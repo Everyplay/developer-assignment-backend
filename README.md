@@ -33,3 +33,5 @@ Client can send a relay messages which payload is relayed to receivers marked in
 - message content/payload - byte array (text, JSON, binary, or anything), max length 1024 kilobytes
 
 ![Relay](https://raw.githubusercontent.com/Everyplay/developer-assignment-backend/master/relay.seq.png)
+
+receivers: 2 and 3, content/payload: foobar

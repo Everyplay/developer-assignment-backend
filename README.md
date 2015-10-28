@@ -1,6 +1,6 @@
 # Assignment
 
-Return your answer as a zip file containing all relevant files(including `.git`, so that we can see your commit history), do not fork this repo.
+Return your answer as a zip file containing all relevant files _with tests_ (including `.git`, so that we can see your commit history), do not fork this repo.
 
 Design and implement(with tests) a _message delivery system_ using [Go](http://golang.org/) programming language. You are free to use any external libs if needed.
 
